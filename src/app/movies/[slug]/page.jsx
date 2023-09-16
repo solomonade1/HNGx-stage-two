@@ -119,15 +119,15 @@ const Page = () => {
                           {movie?.title}
                         </span>
                         <span className={styles.movieYear} data-testid="movie-release-date">
-                          •
+                          
                           {movie?.release_date}
                         </span>
                         <span className={styles.movieParent}>
-                          •
+                          
                           PG-13
                         </span>
                         <span className={styles.movieDuration} data-testid="movie-runtime">
-                          •
+                          
                           {movie?.runtime} m
                         </span>
                         {
