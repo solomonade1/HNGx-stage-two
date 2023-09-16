@@ -3,8 +3,6 @@ import styles from "./topRated.module.css"
 import Link from "next/link";
 import FeaturedItem from "@/components/featuredItem/FeaturedItem";
 import MovieCard from "@/components/movieCard/MovieCard";
-import Paginate from "@/components/paginate/Paginate";
-
 
 async function getTopRatedMovies(page) {
   const res = await fetch(
@@ -32,11 +30,7 @@ const Page = async ({ searchParams }) => {
           ))
         }
          </div>
-         {/* <Paginate
-          currentPage={page < 1 || page > topRatedMovies.total_pages ? 1 : page}
-          totalPages={topRatedMovies.total_pages}
-          pageType="top-rated"
-        /> */}
+       
       </div>
     </div>
   )
