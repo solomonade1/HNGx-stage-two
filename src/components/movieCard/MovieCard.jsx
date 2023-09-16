@@ -6,29 +6,30 @@ import styles from "./movieCard.module.css"
 
 
 async function getMovieDetails(id) {
-  const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}&language=en-US`
-  );
-  return res.json();
+    const res = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}&language=en-US`
+    );
+    return res.json();
 }
 
 
 
 const MovieCard = async ({ movie }) => {
 
-  const year = movie?.release_date.split("-")[0];
-  const movieDetail = await getMovieDetails(movie?.id);
+    const year = movie?.release_date.split("-")[0];
+    const movieDetail = await getMovieDetails(movie?.id);
 
-  const genre = movieDetail?.genres;
-  let country = movieDetail?.production_countries[0]?.name === "United States of America" ? "USA" : movieDetail?.production_countries[0]?.name
+    const genre = movieDetail?.genres;
+    let country = movieDetail?.production_countries[0]?.name === "United States of America" ? "USA" : movieDetail?.production_countries[0]?.name
 
 
-  return (
-    <Link href={`/movies/${movie.id}`} data-testid="movie-card">
-            <div className={styles.container}>
+    return (
+
+        <div className={styles.container} data-testid="movie-card">
+            <Link href={`/movies/${movie.id}`} >
                 <Image className={styles.favorite} src="/Favorite.svg" alt="imdb" width={30} height={30} />
                 <div className={styles.poster}>
-                    <Image  data-testid="movie-poster"  src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path
+                    <Image data-testid="movie-poster" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path
                         }`} alt={movie.title} width={250} height={220} placeholder="blur"
                         blurDataURL="/spinner.svg" />
                 </div>
@@ -54,9 +55,10 @@ const MovieCard = async ({ movie }) => {
                         ))}
                     </div>
                 </div>
-            </div>
-        </Link>
-  );
+            </Link>
+        </div>
+
+    );
 };
 
 export default MovieCard;

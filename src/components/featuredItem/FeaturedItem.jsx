@@ -26,8 +26,9 @@ const FeaturedItem = async ({ movie }) => {
 
 
     return (
-        <Link href={`/movies/${movie.id}`} data-testid="movie-card" className={styles.container}>
-            <div className={styles.wrapper}>
+
+        <div className={styles.container} data-testid="movie-card" >
+            <Link href={`/movies/${movie.id}`} className={styles.wrapper}>
                 <Image className={styles.favorite} src="/Favorite.svg" alt="imdb" width={30} height={30} />
 
                 <div className={styles.poster}>
@@ -58,8 +59,8 @@ const FeaturedItem = async ({ movie }) => {
                         ))}
                     </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
 
     )
 }
