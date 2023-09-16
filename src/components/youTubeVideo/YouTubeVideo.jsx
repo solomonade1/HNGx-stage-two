@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from "./youtubeVideo.module.css"
 
-const YouTubeVideo = ({ videoId, width, height, title }) => {
+const YouTubeVideo = ({ videoId, width, height, title, ref }) => {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
+  
   return (
     <div className={styles.container}>
       <iframe

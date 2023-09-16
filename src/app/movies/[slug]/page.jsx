@@ -39,7 +39,6 @@ const Page = () => {
 
   const params = useParams();
 
-  console.log("Roter => ", params.slug)
   const movieId = params.slug;
 
 
@@ -64,7 +63,6 @@ const Page = () => {
     fetchMovieDetails();
   }, [movieId])
 
-  console.log("TRAILER => ", trailer)
   const year = movie?.release_date.split("-")[0];
   const movieTime = formatMinutesToHoursAndMinutes(movie?.runtime);
   const movieRate = movie?.vote_average;
@@ -78,9 +76,7 @@ const Page = () => {
   const topStars = sortedCast?.slice(0, 3);
 
   const trailerId = trailer?.results[0]?.key
-  // const movieStars = movieCast?.cast.filter(item => item.popularity > 20)
-
-  console.log("Stars => ", topStars)
+  
   const togglePlay = () => {
     if (videoRef.current.paused) {
       videoRef.current.play();
@@ -91,11 +87,7 @@ const Page = () => {
     }
   };
 
-  const myGener = ["Action", "Sci-fi"]
-  const writers = ["Jim Cash", "Jack Epps Jr", "Peter Craig"]
-  const stars = ["Tom Cruise", "Jennifer Connelly", "Miles Teller"]
 
-  console.log(videoRef)
   return (
     <div className={styles.container}>
       
@@ -113,15 +105,8 @@ const Page = () => {
                     <source src="/trailer.mp4" type="video/mp4" />
 
                   </video> */}
-                  <YouTubeVideo videoId={trailerId} width={640} height={360} title={movie?.title} />
-                  {/* <div className={styles.customPlayBtn} onClick={togglePlay}>
-                    <div className={styles.playBtn}>
-                      {isPlaying ? '⏸️' : '▶️'}
-                    </div>
-                    <div className={styles.playText}>
-                      {isPlaying ? 'Pause' : 'Watch Trailer'}
-                    </div>
-                  </div> */}
+                  <YouTubeVideo ref={videoRef}  videoId={trailerId} width={640} height={360} title={movie?.title} />
+                  
                 </div>
 
               </div>
