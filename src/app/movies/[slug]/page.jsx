@@ -120,7 +120,7 @@ const Page = () => {
                         </span>
                         <span className={styles.movieYear} data-testid="movie-release-date">
                           •
-                          {year}
+                          {movie?.release_date}
                         </span>
                         <span className={styles.movieParent}>
                           •
@@ -128,7 +128,7 @@ const Page = () => {
                         </span>
                         <span className={styles.movieDuration} data-testid="movie-runtime">
                           •
-                          {movieTime}
+                          {movie?.runtime} m
                         </span>
                         {
                           movie?.genres?.map((item, index) => (
