@@ -1,0 +1,56 @@
+.container {
+  margin-top: 70px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+.movieHeader {
+  font-size: 45px;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .movieHeader {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .movieHeader {
+    font-size: 1rem;
+  }
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+} */
+
+/* Responsive grid container */
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+}

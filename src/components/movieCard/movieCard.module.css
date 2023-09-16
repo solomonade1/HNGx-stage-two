@@ -1,0 +1,66 @@
+.container {
+  width: 250;
+  /* height: 490px; */
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 200px;
+    /* height: 400px; Adjust height for smaller screens */
+  }
+}
+
+.favorite {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.bottom {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.country {
+  font-weight: bold;
+  font-size: 15px;
+  color: #9ca3af;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ratingLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+}
+
+.ratingRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+}
+
+.genre {
+  font-weight: bold;
+  font-size: 15px;
+  color: #9ca3af;
+}

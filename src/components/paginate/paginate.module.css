@@ -1,0 +1,28 @@
+/* paginate.css */
+
+.paginate {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Adjust the gap as needed */
+    margin-top: 1.5rem; /* Adjust the margin-top as needed */
+    margin-bottom: 1.5rem; /* Adjust the margin-bottom as needed */
+  }
+  
+  .paginateLink{
+    background-color: #059669; /* Adjust the background color as needed */
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Adjust the padding as needed */
+    border-radius: 0.25rem; /* Adjust the border-radius as needed */
+  }
+  
+  .paginateLink .prev {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .paginateLink .next {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  

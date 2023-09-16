@@ -1,0 +1,145 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  /* background-color: #333; */
+  /* color: white; */
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+ /* flex-direction: column; */
+ gap: 20px;
+}
+}
+@media screen and (max-width: 640px) {
+  .container {
+  width: 100%;
+  justify-content: center;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 87%;
+  background-color: #333;
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+@media screen and (max-width: 1536px) {
+  .sticky {
+    max-width: 1366px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .sticky {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sticky {
+    max-width: 948px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sticky {
+    max-width: 640px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .sticky {
+    max-width: 450px;
+    padding: 0px;
+  }
+}
+
+
+.smLogo {
+  display: none;
+}
+.lgLogo {
+display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+  .lgLogo {
+    display: none;
+  }
+
+  .smLogo {
+    display: flex;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .logo {
+   flex: 1;
+  }
+
+  .link {
+flex: 1;
+  }
+}
+.search {
+  width: 400px;
+  padding: 15px;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .search {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search {
+    width: 150px;
+  }
+}
+
+
+.input {
+  height: 100%;
+  width: 80%;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: transparent;
+}
+.input::placeholder {
+  color: white;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.signIn {
+  color: white;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .signIn{
+    font-size: 15px;
+    display: none;
+  }
+}

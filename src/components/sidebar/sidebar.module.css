@@ -1,0 +1,164 @@
+.container {
+  flex: 2;
+  height: 100vh;
+  border: 2px solid grey;
+  border-radius: 0px 45px 45px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 60px;
+    border: none;
+    border-right: 1px solid gray;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .movieHeader {
+    font-size: 1rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: space-between; */
+  /* justify-content: space-between; */
+  padding: 30px 0px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.smLogo {
+  display: none;
+}
+.lgLogo {
+display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .lgLogo {
+    display: none;
+  }
+
+  .smLogo {
+    display: flex;
+  }
+}
+.lists {
+  /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.listItems {
+  list-style: none;
+}
+
+.listItem {
+  list-style: none;
+  /* background-color: aliceblue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.listItem:hover {
+  background-color: #be123c1a;
+}
+.active {
+  background-color: #be123c1a;
+  border-right: 6px solid #be123c;
+}
+.link {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkText {
+  color: grey;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .linkText {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .movieHeader {
+    font-size: 1rem;
+  }
+}
+
+.linkTextActive {
+  color: #be123c;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    display: none;
+  }
+}
+
+.boxWrapper {
+  width: 170px;
+  height: 210px;
+  padding: 20px;
+  border: 1px solid #be123c;
+  border-radius: 30px;
+  background-color: #f8e7eb66;
+}
+
+.boxTextBold {
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333333cc;
+}
+
+.boxText {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #666666;
+}
+
+.boxBtn {
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: #be123c33;
+  font-size: 12px;
+  font-weight: 500;
+  color: #be123c;
+  border: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.logout {
+  margin-top: 30px;
+}

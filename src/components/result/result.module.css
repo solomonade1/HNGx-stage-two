@@ -1,0 +1,45 @@
+/* Add this CSS to your stylesheet */
+
+/* Small screens (sm) */
+@media (min-width: 640px) {
+    .customGrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+  }
+  
+  /* Large screens (lg) */
+  @media (min-width: 1024px) {
+    .customGrid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 70px;
+    }
+  }
+  
+  /* Extra large screens (xl) */
+  @media (min-width: 1280px) {
+    .customGrid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  
+  /* 2 Extra large screens (2xl) */
+  @media (min-width: 1536px) {
+    .customGrid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  
+  /* Maximum width and centering */
+  .customGridContainer {
+    max-width: 6xl;
+    margin: 0 auto;
+    padding: 1rem; /* Adjust the padding as needed */
+  }
+  
+  /* Vertical spacing */
+  .customGridContainer > * {
+    padding: 0.5rem; /* Adjust the padding as needed */
+  }
+  

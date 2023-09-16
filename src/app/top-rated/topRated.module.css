@@ -1,0 +1,36 @@
+.container {
+
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movieHeader {
+    font-size: 45px;
+    line-height: 1.5rem;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list {
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with min width of 250px */
+  gap: 30px;
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .list {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for smaller screens */
+      gap: 20px; /* Adjust gap for smaller screens */
+    }
+  
+   
+  }
