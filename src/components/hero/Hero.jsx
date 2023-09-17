@@ -8,63 +8,9 @@ import Link from "next/link"
 
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-const [movies, setMovies] = useState([])
-const [error, setError] = useState(null); 
-const [isLoading, setIsLoading] = useState(false)
+ 
 
-const goToSlide = (index) => {
-  setCurrentIndex(index);
-};
-
-const nextSlide = () => {
-  const newIndex = (currentIndex + 1) % movies.length;
-  setCurrentIndex(newIndex);
-};
-
-const prevSlide = () => {
-  const newIndex = (currentIndex - 1 + movies.length) % movies.length;
-  setCurrentIndex(newIndex);
-};
-
-useEffect(() => {
-
- const fetchMovies = async() => {
-  setIsLoading(true)
-  try {
-    const res = await fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`,
-      { next: { revalidate: 10000 } }
-    );
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    const data = await response.json();
-    console.log("Data => ", data)
-    // Assuming the API response is an array of image URLs
-    setMovies(data);
-
-  } catch (error) {
-    setError(error.message);
-  
-  } finally {
-    setIsLoading(false);
-  }
- };
-
- fetchMovies()
-}, []);
-
-useEffect(() => {
-  const interval = setInterval(nextSlide, 10000); // Auto-advance every 10 seconds
-
-  return () => {
-    clearInterval(interval); // Cleanup when the component unmounts
-  };
-}, [currentIndex]);
-
-console.log(movies, "MOVIEEE")
+// console.log(movies, "MOVIEEE")
   const ratingNumber = [1, 2, 3, 4, 5]
   return (
     <div className={styles.container}>

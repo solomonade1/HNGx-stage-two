@@ -34,7 +34,7 @@ const MovieCard = async ({ movie }) => {
                         blurDataURL="/spinner.svg" />
                 </div>
                 <div className={styles.bottom}>
-                    <span className={styles.country}> {country}{", "} <span data-testid="movie-release-date"> {year} </span> </span>
+                    <span className={styles.country}> {country}{", "} <span data-testid="movie-release-date"> {movie.release_date} </span> </span>
                     <h2 className={styles.title} data-testid="movie-title">{movie.title}  </h2>
                     <div className={styles.rating}>
                         <div className={styles.ratingLeft}>
